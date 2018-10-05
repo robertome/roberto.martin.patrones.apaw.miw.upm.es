@@ -4,29 +4,22 @@ public class AulaLeaf extends AulaComponent {
 
     private Aula aula;
 
-    public AulaLeaf() {
-    }
+    public AulaLeaf(Aula aula) {
+        assert aula != null;
 
-    public void AulaLeaf(Aula aula) {
-        // TODO implement here
+        this.aula = aula;
     }
 
     public void add(AulaComponent aulaComponent) {
-        // TODO implement here
+        // Es una hoja, no implementa el metodo abstracto
     }
 
     public void remove(AulaComponent aulaComponent) {
-        // TODO implement here
+        // Es una hoja, no implementa el metodo abstracto
     }
 
-    public void view() {
-        // TODO implement here
+    public String view() {
+        return aula.getId();
     }
-
-    public abstract void add(AulaComponent aulaComponent);
-
-    public abstract void remove(AulaComponent aulaComponent);
-
-    public abstract void view();
 
 }

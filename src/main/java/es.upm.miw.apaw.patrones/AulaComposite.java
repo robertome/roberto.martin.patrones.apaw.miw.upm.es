@@ -1,34 +1,32 @@
 package es.upm.miw.apaw.patrones;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AulaComposite extends AulaComponent {
 
     private List<AulaComponent> aulaComponentList;
+    private String name;
 
-    public AulaComposite() {
-    }
-
-    public void AulaComposite(String name) {
-        // TODO implement here
+    public AulaComposite(String name) {
+        this.name = name;
+        aulaComponentList = new ArrayList<AulaComponent>();
     }
 
     public void add(AulaComponent aulaComponent) {
-        // TODO implement here
+        assert aulaComponent != null;
+
+        aulaComponentList.add(aulaComponent);
     }
 
     public void remove(AulaComponent aulaComponent) {
-        // TODO implement here
+        assert aulaComponent != null;
+
+        aulaComponentList.remove(aulaComponent);
     }
 
-    public void view() {
-        // TODO implement here
+    public String view() {
+        return name;
     }
-
-    public abstract void add(AulaComponent aulaComponent);
-
-    public abstract void remove(AulaComponent aulaComponent);
-
-    public abstract void view();
 
 }
