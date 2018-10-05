@@ -1,5 +1,6 @@
 package es.upm.miw.apaw.patrones;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -13,8 +14,11 @@ class PracticaFactoryTest {
     private Practica practicaAPAW = new PracticaBuilder(ID1, "Patrones de Diseño").asignatura(Asignatura.APAW).fecha(LocalDateTime.now()).entregada(true).nota(8).build();
     private Practica practicaFEM = new PracticaBuilder(ID2, "Practica 1").asignatura(Asignatura.FEM).fecha(LocalDateTime.now()).build();
 
-    PracticaFactoryTest() {
+    @BeforeEach
+    void init() {
         PracticaFactory factory = PracticaFactory.getFactory();
+        factory.clear();
+
         factory.addPractica(practicaAPAW);
         factory.addPractica(practicaFEM);
     }

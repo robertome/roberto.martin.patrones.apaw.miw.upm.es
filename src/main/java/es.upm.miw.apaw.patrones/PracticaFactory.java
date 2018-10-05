@@ -39,4 +39,7 @@ public class PracticaFactory extends Observable {
         practicas.put(practica.getId(), practica);
     }
 
+    public void clear() {
+        practicas.clear();
+    }
 }
