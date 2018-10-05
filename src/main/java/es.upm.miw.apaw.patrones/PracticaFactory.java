@@ -3,7 +3,7 @@ package es.upm.miw.apaw.patrones;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PracticaFactory extends Observable {
+public class PracticaFactory extends Observable<Practica> {
 
     private static PracticaFactory factory;
     private Map<String, Practica> practicas;
@@ -37,6 +37,8 @@ public class PracticaFactory extends Observable {
         assert practica.getId() != null;
 
         practicas.put(practica.getId(), practica);
+
+        this.notifyObservers(practica);
     }
 
     public void clear() {
