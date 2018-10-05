@@ -7,6 +7,9 @@ public class PracticaBuilder {
     private Practica practica = new Practica();
 
     public PracticaBuilder(String id, String nombre) {
+        assert id != null && !id.isEmpty();
+        assert nombre != null && !nombre.isEmpty();
+
         practica.setId(id);
         practica.setNombre(nombre);
         practica.setFecha(LocalDateTime.now());

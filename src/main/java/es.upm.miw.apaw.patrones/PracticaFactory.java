@@ -1,33 +1,42 @@
 package es.upm.miw.apaw.patrones;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class PracticaFactory extends Observable {
 
     private static PracticaFactory factory;
-    private Map practicas;
+    private Map<String, Practica> practicas;
 
-    public PracticaFactory() {
+    private PracticaFactory() {
+        practicas = new HashMap<String, Practica>();
     }
 
-    public static void getFactory() {
-        // TODO implement here
+    public static PracticaFactory getFactory() {
+        if (factory == null) {
+            factory = new PracticaFactory();
+        }
+
+        return factory;
     }
 
-    private void PracticaFactory() {
-        // TODO implement here
-    }
+    public Practica getPractica(String id) {
+        assert id != null;
 
-    public void getPractica(String id) {
-        // TODO implement here
+        return practicas.get(id);
     }
 
     public void removePractica(String id) {
-        // TODO implement here
+        assert id != null;
+
+        practicas.remove(id);
     }
 
     public void addPractica(Practica practica) {
-        // TODO implement here
+        assert practica != null;
+        assert practica.getId() != null;
+
+        practicas.put(practica.getId(), practica);
     }
 
 }
