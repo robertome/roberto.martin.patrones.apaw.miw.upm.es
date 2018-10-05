@@ -4,43 +4,36 @@ import java.time.LocalDateTime;
 
 public class PracticaBuilder {
 
-    private static int currentId;
-    private Practica practica;
+    private Practica practica = new Practica();
 
-    public PracticaBuilder() {
-    }
-
-    public void PracticaBuilder(String nombre) {
-        // TODO implement here
-    }
-
-    public void PracticaBuilder(int id, String nombre) {
-        // TODO implement here
+    public PracticaBuilder(String id, String nombre) {
+        practica.setId(id);
+        practica.setNombre(nombre);
+        practica.setFecha(LocalDateTime.now());
     }
 
     public PracticaBuilder fecha(LocalDateTime fecha) {
-        // TODO implement here
-        return null;
+        practica.setFecha(fecha);
+        return this;
     }
 
     public PracticaBuilder entregada(Boolean entregada) {
-        // TODO implement here
-        return null;
+        practica.setEntregada(entregada);
+        return this;
     }
 
     public PracticaBuilder asignatura(Asignatura asignatura) {
-        // TODO implement here
-        return null;
+        practica.setAsignatura(asignatura);
+        return this;
     }
 
-    public PracticaBuilder alumno(Alumno alumno) {
-        // TODO implement here
-        return null;
+    public PracticaBuilder nota(Integer nota) {
+        practica.setNota(nota);
+        return this;
     }
 
     public Practica build() {
-        // TODO implement here
-        return null;
+        return practica;
     }
 
 }
