@@ -1,7 +1,7 @@
 package es.upm.miw.apaw.patrones;
 
-public interface Observer {
+public interface Observer<T> {
 
-    public void update();
+    public void update(T obj);
 
 }
