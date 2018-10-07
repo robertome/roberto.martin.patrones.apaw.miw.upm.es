@@ -16,3 +16,14 @@
 - (+2). Patrón Composite de una entidad . La entidad no puede ser cambiada de su interfaz publico dado. Mediante el método view() se visualiza la id si es una entidad y name (String) si es una agrupación. Debe ir con test de prueba
 - (+2). Patrón Strategy. Buscar, comprender , explicar y realizar un ejemplo propio de su funcionamiento
 - (+2). A la Factoría anterior,  aplicarle el patrón Observer, para que cada vez que se añade un objeto nuevo, provoque un evento, es decir, se notifique a todos los observadores.  Debe ir con test de prueba
+
+## Solución
+
+### Modelo de datos escogido
+![alt text](https://raw.githubusercontent.com/robertome/roberto.martin.patrones.apaw.miw.upm.es/develop/doc/APAW.ECP1.Modelo.png)
+
+### Modelo de datos con patrones aplicados
+![alt text](https://raw.githubusercontent.com/robertome/roberto.martin.patrones.apaw.miw.upm.es/develop/doc/APAW.ECP1.Patrones.png)
+
+### Patrón Strategy
+![alt text](https://raw.githubusercontent.com/robertome/roberto.martin.patrones.apaw.miw.upm.es/develop/doc/APAW.ECP1.Strategy.png)
