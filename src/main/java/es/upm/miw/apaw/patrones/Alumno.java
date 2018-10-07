@@ -8,6 +8,7 @@ public class Alumno implements Observer<Practica> {
     private String id;
     private String nombre;
     private String apellidos;
+    private Profesor profesor;
     private Set<Practica> practicas = new HashSet<>();
 
     public Alumno() {
@@ -49,6 +50,14 @@ public class Alumno implements Observer<Practica> {
         this.apellidos = apellidos;
     }
 
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }
+
     static class Builder {
         private Alumno alumno = new Alumno();
 
@@ -70,6 +79,11 @@ public class Alumno implements Observer<Practica> {
             assert apellidos != null && !apellidos.isEmpty();
 
             alumno.setApellidos(apellidos);
+            return this;
+        }
+
+        public Builder profesor(Profesor profesor) {
+            alumno.setProfesor(profesor);
             return this;
         }
 
